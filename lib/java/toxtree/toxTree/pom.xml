@@ -1,0 +1,78 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+  <groupId>toxtree</groupId>
+  <artifactId>toxtree</artifactId>
+  <version>1.60-SNAPSHOT</version>
+  <packaging>pom</packaging>
+  <name>toxtree</name>
+   <url>http://toxtree.sourceforge.net</url>
+  <distributionManagement>
+  	<!--
+    <site>
+      <id>website_acad</id>
+      <url>scp://ambit.acad.bg/var/www/html/ambit/toxtree</url>
+    </site>
+    -->
+    <site>
+      <id>website_toxtree</id>
+      <url>scp://web.sourceforge.net/home/groups/t/to/toxtree/htdocs</url>
+    </site>    
+  </distributionManagement>
+  <inceptionYear>2004</inceptionYear>
+  <issueManagement>
+  	<url>http://sourceforge.net/tracker/?group_id=152702</url>
+  </issueManagement>
+  <developers>
+  	<developer>
+  		<id>vedina</id>
+  		<name>Nina Jeliazkova</name>
+  		<email>nina@acad.bg</email>
+  		<roles>
+  			<role>?</role>
+  		</roles>
+  	</developer>
+  	<developer>
+  		<id>MM</id>
+  		<name>Martin Martinov</name>
+  	</developer>
+  </developers>
+  
+	<scm>
+		<connection>scm:svn:https://toxtree.svn.sourceforge.net/svnroot/toxtree</connection>
+	  <developerConnection>scm:svn:https://toxtree.svn.sourceforge.net/svnroot/toxtree</developerConnection>
+	  <url>http://toxtree.svn.sourceforge.net/viewvc/toxtree/</url>
+	</scm>  	
+    <mailingLists>
+    <mailingList>
+      <name>Users list</name>
+      <subscribe>https://lists.sourceforge.net/lists/listinfo/toxtree-users</subscribe>
+      <unsubscribe>https://lists.sourceforge.net/lists/listinfo/toxtree-users</unsubscribe>
+      <post>mailto:toxtree-users@lists.sourceforge.net</post>
+      <archive>http://sourceforge.net/mailarchive/forum.php?forum_name=toxtree-users</archive>
+    </mailingList>
+         
+  </mailingLists>
+  <licenses>
+  <license>
+    <name>GPL</name>
+    <url>http://www.gnu.org/licenses/old-licenses/gpl-2.0.txt</url>
+    <distribution>repo</distribution>
+    <comments></comments>
+  </license>
+</licenses>
+  <reporting>
+    <plugins>
+      <plugin>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-project-info-reports-plugin</artifactId>
+        <configuration>
+          <webAccessUrl>http://toxtree.svn.sourceforge.net/viewvc/toxtree/</webAccessUrl>
+          <anonymousConnection>scm:svn:https://toxtree.svn.sourceforge.net/svnroot/toxtree</anonymousConnection>
+          <developerConnection>scm:svn:https://toxtree.svn.sourceforge.net/svnroot/toxtree</developerConnection>
+        </configuration>
+      </plugin>
+    </plugins>
+  </reporting>
+  
+</project>

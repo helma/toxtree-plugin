@@ -1,0 +1,14 @@
+<div class='lazar-prediction'>
+
+  <h1>Toxic Hazard (Cramer Rules)</h1>
+
+  <table>
+    <tr>
+      <td> <%= display_smiles(params[:smiles]) %> </td>
+      <td class="<%= @cramer.css_class %>"> <%= @cramer.cramer_class %> </td>
+      <td> <%= @cramer.explanation %> </td>
+    </tr>
+  </table>
+
+</div>
+

@@ -1,0 +1,17 @@
+#toxTree.apps.ToxTreeApp
+#Thu Sep 25 11:24:50 CEST 2008
+mengine.linux=helper/smi23d/linux/mengine
+generate2D=true
+smi2sdf.smiles.generate=true
+mopac.dir=helper
+showAromaticity=true
+mengine.win=helper/smi23d/win/mengine.exe
+smilesParser=true
+obabel.linux=helper/openbabel/linux/babel
+SMILES=SMILES
+defaultDir=
+atomtypes.stop=false
+smi2sdf.win=helper/smi23d/win/smi2sdf.exe
+obabel.win=helper/openbabel/win/babel.exe
+smi2sdf.linux=helper/smi23d/linux/smi2sdf
+mopac.exe=MOPAC_7.1.exe
