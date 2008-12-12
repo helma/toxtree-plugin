@@ -1,0 +1,16 @@
+<h1>Oral Toxicity (Cramer Rules)</h1>
+
+<table>
+  <tr>
+    <th>SMILES</th>
+    <td> <%= params[:smiles] %> </td>
+  </tr>
+  <tr>
+    <th>Class</th>
+    <td class="<%= @cramer.css_class %>"> <%= @cramer.cramer_class %> </td>
+  </tr>
+  <tr>
+    <th>Explanation</th>
+    <td> <%= @cramer.explanation %> </td>
+  </tr>
+</table>
