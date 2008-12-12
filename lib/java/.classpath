@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry excluding="site/**" kind="src" path="toxTree/src"/>
+	<classpathentry kind="src" path="plugins/michaelacceptors/src"/>
+	<classpathentry kind="src" path="plugins/eye/src"/>
+	<classpathentry kind="src" path="plugins/verhaar/src"/>
+	<classpathentry kind="src" path="plugins/sicret/src"/>
+	<classpathentry kind="src" path="plugins/mutant/src"/>
+	<classpathentry kind="lib" path="toxTree/jars/cdk-1.1.svn-19012008.jar" sourcepath="/cdk"/>
+	<classpathentry kind="lib" path="toxTree/jars/jai_codec.jar"/>
+	<classpathentry kind="lib" path="toxTree/jars/jai_core.jar"/>
+	<classpathentry kind="lib" path="toxTree/jars/Jama-1.0.1.jar"/>
+	<classpathentry kind="lib" path="toxTree/jars/jgrapht-0.6.0.jar"/>
+	<classpathentry kind="lib" path="toxTree/jars/jh.jar"/>
+	<classpathentry kind="lib" path="toxTree/jars/joelib.jar"/>
+	<classpathentry kind="lib" path="toxTree/jars/junit.jar"/>
+	<classpathentry kind="lib" path="toxTree/jars/log4j.jar"/>
+	<classpathentry kind="lib" path="toxTree/jars/poi-3.0.jar"/>
+	<classpathentry kind="lib" path="toxTree/jars/poi-contrib.jar"/>
+	<classpathentry kind="lib" path="toxTree/jars/poi-scratchpad.jar"/>
+	<classpathentry kind="lib" path="toxTree/jars/swing-layout-1.0.jar"/>
+	<classpathentry kind="lib" path="toxTree/jars/vecmath1.2-1.14.jar"/>
+	<classpathentry kind="lib" path="toxTree/jars/wizard.jar"/>
+	<classpathentry kind="lib" path="toxTree/jars/l2fprod/l2fprod-common-all.jar"/>
+	<classpathentry kind="lib" path="toxTree/jars/itext-1.4.5.jar"/>
+	<classpathentry kind="lib" path="toxTree/jars/prefuse.jar" sourcepath="/prefuse-beta"/>
+	<classpathentry kind="lib" path="toxTree/jars/ambit-smarts-2.0.jar" sourcepath="/ambit2"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
+	<classpathentry kind="output" path="bin"/>
+</classpath>

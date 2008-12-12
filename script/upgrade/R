@@ -1,0 +1,6 @@
+#!/bin/bash
+
+# upgrade R
+./configure --without-blas --enable-BLAS-shlib --enable-R-shlib
+make
+cp $r_home/bin/R $r_program 
