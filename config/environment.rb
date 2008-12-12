@@ -18,9 +18,9 @@ require "java.rb"
 Rails::Initializer.run do |config|
   #config.plugins = [:engines, :opentox, :lazar, :all]
   # load gems from vendor/gems
-  #config.load_paths += Dir["#{RAILS_ROOT}/vendor/gems/**"].map do |dir| 
-      #File.directory?(lib = "#{dir}/lib") ? lib : dir
-  #end
+  config.load_paths += Dir["#{RAILS_ROOT}/vendor/lib/ruby/gems/1.8/gems/*"].map do |dir| 
+      File.directory?(lib = "#{dir}/lib") ? lib : dir
+  end
 
   #config.load_paths += %W( #{RAILS_ROOT}/vendor/src/rubygems/lib )
   # Settings in config/environments/* take precedence those specified here

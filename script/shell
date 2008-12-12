@@ -3,5 +3,10 @@
 export PATH=`pwd`/vendor/bin:$PATH
 export R_HOME=vendor/R
 export R_INCLUDE=vendor/R/include
-vendor/bin/ruby config/java.rb
+if [ -x vendor/bin/ruby ]
+then
+	vendor/bin/ruby config/java.rb
+else
+	ruby config/java.rb
+fi
 $SHELL
