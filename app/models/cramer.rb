@@ -9,27 +9,47 @@ class Cramer
 
     builder = Rjb::import('org.openscience.cdk.DefaultChemObjectBuilder').getInstance
     sp = Rjb::import('org.openscience.cdk.smiles.SmilesParser').new(builder)
-    mol = sp.parseSmiles(smiles)
+		invalid_smiles = false
+		begin
+			mol = sp.parseSmiles(smiles)
+		rescue 
+			invalid_smiles = true
+			@cramer_class = "not available"
+			@css_class = ''
+			@explanation = "Invalid Smiles"
+			@results = []
+		end
 
-    result = Rjb::import('toxTree.tree.cramer.CramerRules').new.createDecisionResult
-    result.classify(mol) 
+		unless invalid_smiles
+			result = Rjb::import('toxTree.tree.cramer.CramerRules').new.createDecisionResult
+			prediction_failed = false
+			begin
+				result.classify(mol) 
+				@cramer_class = result.getCategory.getName
+				case @cramer_class
+				when /High/
+					@css_class = 'active'
+				when /Intermediate/
+					@css_class = 'unknown'
+				when /Low/
+					@css_class = 'inactive'
+				end
+				@explanation = result.getCategory.getExplanation
+				nrResults = result.getRuleResultsCount
+				nrResults -= 1
+				@results = []
+				(0..nrResults).each do |i|
+					@results << result.getRuleResult(i)
+				end
+			rescue
+				prediction_failed = true
+				@cramer_class = "not available"
+				@css_class = ''
+				@explanation = "Prediction failed"
+				@results = []
+			end
 
-    @cramer_class = result.getCategory.getName
-    case @cramer_class
-    when /High/
-      @css_class = 'active'
-    when /Intermediate/
-      @css_class = 'unknown'
-    when /Low/
-      @css_class = 'inactive'
-    end
-    @explanation = result.getCategory.getExplanation
-    nrResults = result.getRuleResultsCount
-    nrResults -= 1
-    @results = []
-    (0..nrResults).each do |i|
-      @results << result.getRuleResult(i)
-    end
+		end
 
   end
 
